@@ -1,0 +1,48 @@
+# ============================================================
+# TEMPLATE .gitignore — Projets Claude Code (Python + Office)
+# Copier ce fichier à la racine de chaque nouveau projet
+# et le renommer en .gitignore
+# ============================================================
+
+# --- Fichiers générés (ne jamais versionner) ---
+output/
+exports/
+generated/
+*.docx
+*.xlsx
+*.xls
+*.pdf
+*.pptx
+*.csv
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# --- Données sensibles ---
+*.key
+*.secret
+secrets.json
+config_local.py
+.env.local
+
+# --- Système ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
+
+# --- Éditeurs ---
+.vscode/
+.idea/
+*.swp
