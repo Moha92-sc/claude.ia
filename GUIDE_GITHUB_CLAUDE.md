@@ -6,6 +6,23 @@ puis continuer sur PC B sans rien perdre.
 
 ---
 
+## OPTIMISATIONS (une seule fois par PC)
+
+### Alias git — raccourcis essentiels
+```cmd
+git config --global alias.save "!git add . && git commit -m"
+git config --global alias.sync "!git pull && git push"
+git config --global alias.etat "status"
+```
+
+| Commande | Action |
+|----------|--------|
+| `git save "message"` | Ajoute tout + commit |
+| `git sync` | Pull + Push en une fois |
+| `git etat` | Voir les fichiers modifiés |
+
+---
+
 ## INSTALLATION (une seule fois par PC)
 
 ### 1. Installer Git
