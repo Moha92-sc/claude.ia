@@ -64,22 +64,51 @@ echo *.tmp
 (
 echo # %NOM%
 echo.
+echo ## Instructions permanentes pour Claude
+echo 1. Sauvegarder immediatement tout code ecrit dans un fichier sur le disque
+echo 2. Mettre a jour le Checkpoint apres chaque avancee significative
+echo 3. Remplir "Reprendre ici" avant la fin de chaque session
+echo 4. Repondre toujours en francais
+echo.
+echo ---
+echo.
 echo ## Description
 echo %DESC%
 echo.
-echo ## Date de création
+echo ## Date de creation
 echo %date%
 echo.
 echo ## Structure
-echo - `scripts/` : scripts Python/JS
-echo - `templates/` : modeles de documents
-echo - `output/` : fichiers generés ^(ignores par Git^)
+echo ```
+echo %NOM%/
+echo ├── scripts/        Scripts Python/JS
+echo ├── templates/      Modeles de documents
+echo ├── output/         Fichiers generes ^(ignores par Git^)
+echo └── CLAUDE.md       Ce fichier
+echo ```
+echo.
+echo ---
+echo.
+echo ## Checkpoint
+echo **Derniere mise a jour :** %date%
+echo **Etat :** 🟡 Initialisation du projet
+echo.
+echo ### Ce qui est fait
+echo - [x] Creation du depot GitHub
+echo - [x] Structure de base mise en place
+echo.
+echo ### Ce qui reste a faire
+echo - [ ] A definir
+echo.
+echo ---
 echo.
 echo ## Reprendre ici
-echo ^> A remplir avant chaque fin de session
+echo **Prochaine etape :** Definir les objectifs du projet
 echo.
-echo ## Commandes utiles
-echo ^> A remplir selon le projet
+echo ---
+echo.
+echo ## Decisions techniques importantes
+echo ^> A remplir au fur et a mesure
 ) > CLAUDE.md
 
 :: Créer README.md
