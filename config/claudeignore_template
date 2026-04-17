@@ -1,0 +1,52 @@
+# ── Environnements Python ──────────────────────────────────────────────────────
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# ── Node / JS ──────────────────────────────────────────────────────────────────
+node_modules/
+*.lock
+package-lock.json
+yarn.lock
+.next/
+.nuxt/
+
+# ── Graphify (garder graph.json + GRAPH_REPORT.md, ignorer le cache) ──────────
+graphify-out/cache/
+graphify-out/converted/
+
+# ── Sorties générées (Word, Excel, DXF) ───────────────────────────────────────
+rendus/
+output/
+*.tmp
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Git ───────────────────────────────────────────────────────────────────────
+.git/
+
+# ── Archives ──────────────────────────────────────────────────────────────────
+05_archives/
+
+# ── Fichiers binaires lourds (Revit, AutoCAD, Office, BIM) ───────────────────
+*.nwd
+*.rvt
+*.rfa
+*.dwg
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+*.zip
+*.rar
+*.7z
+*.exe
+*.dll
+*.pyd
