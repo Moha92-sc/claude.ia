@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Glob|Grep|mcp__filesystem__read_file|mcp__filesystem__search_files|mcp__filesystem__list_directory",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "CHEMIN_VENV/Scripts/python.exe -c \"import os; cwd = os.getcwd(); graph = os.path.join(cwd, 'graphify-out', 'graph.json'); print('[graphify] graph actif:', graph) if os.path.exists(graph) else None\""
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "superpowers-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers-marketplace"
+      }
+    }
+  }
+}
