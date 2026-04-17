@@ -1,0 +1,97 @@
+{
+  "_commentaire": "Template MCP servers — à intégrer dans ~/.claude.json > mcpServers",
+  "_installation": "claude mcp add <nom> <commande> [args...]",
+
+  "mcpServers": {
+    "filesystem": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:/Users/TON_USER/Documents/workspace",
+        "C:/Users/TON_USER/Documents"
+      ],
+      "env": {}
+    },
+    "github": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "VOTRE_TOKEN_ICI"
+      }
+    },
+    "memory": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "env": {}
+    },
+    "sequential-thinking": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "env": {}
+    },
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "env": {}
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp"],
+      "env": {}
+    },
+    "puppeteer": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+      "env": {}
+    },
+    "tavily-search": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "tavily-mcp"],
+      "env": {
+        "TAVILY_API_KEY": "VOTRE_CLE_TAVILY_ICI"
+      }
+    },
+    "sqlite": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "mcp-sqlite", "C:/Users/TON_USER/Documents/workspace/projets.db"],
+      "env": {}
+    },
+    "excel": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@negokaz/excel-mcp-server"],
+      "env": {}
+    },
+    "notebooklm": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["notebooklm-mcp@latest"],
+      "env": {}
+    },
+    "revit": {
+      "command": "mcp-server-for-revit",
+      "args": []
+    }
+  },
+
+  "_commandes_installation": {
+    "filesystem": "claude mcp add filesystem npx -- -y @modelcontextprotocol/server-filesystem CHEMIN_WORKSPACE",
+    "github": "claude mcp add github npx -- -y @modelcontextprotocol/server-github",
+    "memory": "claude mcp add memory npx -- -y @modelcontextprotocol/server-memory",
+    "sequential-thinking": "claude mcp add sequential-thinking npx -- -y @modelcontextprotocol/server-sequential-thinking",
+    "context7": "claude mcp add context7 npx -- -y @upstash/context7-mcp",
+    "playwright": "claude mcp add playwright npx -- -y @playwright/mcp",
+    "tavily": "claude mcp add tavily-search npx -- -y tavily-mcp",
+    "notebooklm": "claude mcp add notebooklm npx notebooklm-mcp@latest"
+  }
+}
